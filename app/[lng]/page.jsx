@@ -1,9 +1,9 @@
-import { useTranslation } from '@app/i18n';
+import { myTranslation } from '@app/i18n';
 import Link from 'next/link';
 
 // set dynamic metadata
 export async function generateMetadata({ params: { lng } }) {
-  const { t } = await useTranslation(lng);
+  const { t } = await myTranslation(lng);
 
   return ({
     title: t('Trang chủ'),
@@ -12,7 +12,7 @@ export async function generateMetadata({ params: { lng } }) {
 }
 
 const Page = async ({ params: { lng } }) => {
-  const { t } = await useTranslation(lng);
+  const { t } = await myTranslation(lng);
 
   return (
     <>
